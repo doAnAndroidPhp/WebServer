@@ -22,9 +22,9 @@
                             <option >Chọn lĩnh vực</option>
                             @foreach($listLinhVuc as $linhVuc)
                                 @if(isset($cauHoi))
-                                    <option @if($linhVuc->id == $cauHoi->linh_vuc_id) selected @endif value=" {{$linhVuc->id}} ">{{$linhVuc->ten_linh_vuc}}</option>
+                                     <option @if($linhVuc->id == $cauHoi->linh_vuc_id) selected="" @endif value=" {{$linhVuc->id}}" >{{$linhVuc->ten_linh_vuc}}</option>
                                 @else
-                                    <option value=" $linhVuc->ten_linh_vuc">{{$linhVuc->ten_linh_vuc}}</option>
+                                    <option value=" {{$linhVuc->id}}">{{$linhVuc->ten_linh_vuc}}</option>
                                @endif 
                                @endforeach
                         </select>
