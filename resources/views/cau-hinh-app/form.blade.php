@@ -6,10 +6,10 @@
             <div class="card-body">
                 <h4 class="mb-3 header-title">@if(isset($cauHinhApp)) Cập nhật @else Thêm @endif Cấu Hình App</h4>
                 @if(isset($cauHinhApp))
-                <form action="{{ route('cau-hoi.xu-ly-cap-nhat', ['id' =>$cauHinhApp ->id]) }}" method="POST">
+                <form action="{{ route('cau-hinh-app.xu-ly-cap-nhat', ['id' =>$cauHinhApp ->id]) }}" method="POST">
                 @else
 
-                <form action="{{ route('cau-hoi.xu-ly-them-moi') }}" method="POST">
+                <form action="{{ route('cau-hinh-app.xu-ly-them-moi') }}" method="POST">
                 @endif
                     @csrf
                     <div class="form-group">

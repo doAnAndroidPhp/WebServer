@@ -13,7 +13,7 @@
                     @csrf
                     <div class="form-group">
                          <label for="ten_dang_nhap">Tên</label>
-                        <input type="text" class="form-control" id="ten_dang_nhap" name="ten_dang_nhap" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->ten_dang_nhap}}" @endif>
+                        <input type="text" class="form-control" id="ten_dang_nhap" name="ten_dang_nhap" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->ten_dang_nhap}}" readonly="readonly" @endif>
                     </div>
                     <div class="form-group">
                         <label for="mat_khau">Mật khẩu</label>

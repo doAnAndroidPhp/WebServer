@@ -4,17 +4,17 @@ namespace App\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\NguoiChoi;
+use App\ChiTietLuotChoi;
 
-class NguoiChoiController extends Controller
+class ChiTietLuotChoiController extends Controller
 {
     // Lay danh sach bai tho
     public function layDanhSach() 
     {
-        $listNguoiChoi = NguoiChoi::all();
+        $listChiTietLuotChoi = ChiTietLuotChoi::all();
         $result = [
             'success'   => true,
-            'data'    => $listNguoiChoi
+            'data'    => $listChiTietLuotChoi
         ];
         return response()->json($result);
     }
