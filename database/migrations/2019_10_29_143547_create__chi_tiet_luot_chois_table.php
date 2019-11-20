@@ -14,11 +14,11 @@ class CreateChiTietLuotChoisTable extends Migration
     public function up()
     {
         Schema::create('chi_tiet_luot_choi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('luot_choi_id');
-            $table->bigInteger('cau_hoi_id');
+            $table->Increments('id');
+            $table->Integer('luot_choi_id');
+            $table->Integer('cau_hoi_id');
             $table->string('phuong_an');
-            $table->bigInteger('diem');
+            $table->Integer('diem');
         });
     }
 

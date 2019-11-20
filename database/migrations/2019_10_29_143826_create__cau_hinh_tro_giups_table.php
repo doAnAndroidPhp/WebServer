@@ -15,9 +15,9 @@ class CreateCauHinhTroGiupsTable extends Migration
     {
         Schema::create('cau_hinh_tro_giup', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('loai_tro_giup');
-            $table->bigInteger('thu_tu');
-            $table->bigInteger('credit');
+            $table->Integer('loai_tro_giup');
+            $table->Integer('thu_tu');
+            $table->Integer('credit');
             $table->timestamps();
         });
     }

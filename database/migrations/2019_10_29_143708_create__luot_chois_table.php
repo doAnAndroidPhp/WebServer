@@ -14,9 +14,9 @@ class CreateLuotChoisTable extends Migration
     public function up()
     {
         Schema::create('luot_choi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('nguoi_choi_id');
-            $table->bigInteger('so_cau');
+            $table->Increments('id');
+            $table->Integer('nguoi_choi_id');
+            $table->Integer('so_cau');
             $table->string('diem');
             $table->string('ngay_gio');
         });

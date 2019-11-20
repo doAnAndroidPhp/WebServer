@@ -14,10 +14,10 @@ class CreateGoiCreditsTable extends Migration
     public function up()
     {
         Schema::create('goi_credit', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('ten_goi');
-            $table->bigInteger('credit');
-            $table->bigInteger('so_tien');
+            $table->Integer('credit');
+            $table->Integer('so_tien');
             $table->timestamps();
             $table->softDeletes();
         });

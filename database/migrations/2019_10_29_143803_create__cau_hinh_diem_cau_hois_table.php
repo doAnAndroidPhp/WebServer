@@ -14,9 +14,9 @@ class CreateCauHinhDiemCauHoisTable extends Migration
     public function up()
     {
         Schema::create('cau_hinh_diem_cau_hoi', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('thu_tu');
-            $table->bigInteger('diem');
+            $table->Increments('id');
+            $table->Integer('thu_tu');
+            $table->Integer('diem');
             $table->timestamps();
         });
     }

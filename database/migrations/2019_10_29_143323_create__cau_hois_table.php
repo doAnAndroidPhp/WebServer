@@ -14,9 +14,9 @@ class CreateCauHoisTable extends Migration
     public function up()
     {
         Schema::create('cau_hoi', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->text('noi_dung');
-            $table->unsingedInteger('linh_vuc_id');
+            $table->Integer('linh_vuc_id');
             $table->text('phuong_an_a');
             $table->text('phuong_an_b');
             $table->text('phuong_an_c');

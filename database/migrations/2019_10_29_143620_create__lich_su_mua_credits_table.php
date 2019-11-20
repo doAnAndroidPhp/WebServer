@@ -14,11 +14,11 @@ class CreateLichSuMuaCreditsTable extends Migration
     public function up()
     {
         Schema::create('lich_su_mua_credit', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('nguoi_choi_id');
-            $table->bigInteger('goi_credit_id');
-            $table->bigInteger('credit');
-            $table->bigInteger('so_tien');
+            $table->Increments('id');
+            $table->Integer('nguoi_choi_id');
+            $table->Integer('goi_credit_id');
+            $table->Integer('credit');
+            $table->Integer('so_tien');
         });
     }
 

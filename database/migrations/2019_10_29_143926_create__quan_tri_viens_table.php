@@ -14,7 +14,7 @@ class CreateQuanTriViensTable extends Migration
     public function up()
     {
         Schema::create('quan_tri_vien', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('ten_dang_nhap');
             $table->string('mat_khau');
             $table->timestamps();

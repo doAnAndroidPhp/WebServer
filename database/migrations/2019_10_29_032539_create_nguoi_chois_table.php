@@ -14,13 +14,13 @@ class CreateNguoiChoisTable extends Migration
     public function up()
     {
         Schema::create('nguoi_choi', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('ten_dang_nhap');
             $table->string('mat_khau');
             $table->string('email');
             $table->string('hinh_dai_dien');
-            $table->unsignedInteger('diem_cao_nhat')->default(0);
-            $table->unsignedInteger('credit')->default(0);
+            $table->Integer('diem_cao_nhat')->default(0);
+            $table->Integer('credit')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
