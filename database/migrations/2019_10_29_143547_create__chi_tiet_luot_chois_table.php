@@ -19,6 +19,7 @@ class CreateChiTietLuotChoisTable extends Migration
             $table->Integer('cau_hoi_id');
             $table->string('phuong_an');
             $table->Integer('diem');
+            $table->timestamps();
         });
     }
 

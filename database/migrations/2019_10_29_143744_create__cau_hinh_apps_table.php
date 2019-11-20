@@ -18,6 +18,7 @@ class CreateCauHinhAppsTable extends Migration
             $table->Integer('co_hoi_sai');
             $table->Integer('thoi_gian_tra_loi');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,6 +19,7 @@ class CreateLichSuMuaCreditsTable extends Migration
             $table->Integer('goi_credit_id');
             $table->Integer('credit');
             $table->Integer('so_tien');
+            $table->timestamps();
         });
     }
 

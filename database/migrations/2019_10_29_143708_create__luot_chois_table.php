@@ -19,6 +19,7 @@ class CreateLuotChoisTable extends Migration
             $table->Integer('so_cau');
             $table->string('diem');
             $table->string('ngay_gio');
+            $table->timestamps();
         });
     }
 
