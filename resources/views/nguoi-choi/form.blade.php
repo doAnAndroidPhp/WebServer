@@ -17,7 +17,7 @@
                     </div>
                     <div class="form-group">
                         <label for="mat_khau">Mật khẩu</label>
-                        <input type="text" class="form-control" id="mat_khau" name="mat_khau" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->mat_khau}}" @endif>
+                        <input type="password" class="form-control" id="mat_khau" name="mat_khau" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->mat_khau}}" @endif>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
