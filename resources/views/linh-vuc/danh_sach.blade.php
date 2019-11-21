@@ -5,7 +5,6 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="header-title">Danh sách lĩnh vực</h4>
-                <a href="{{route('linh-vuc.them-moi')}}" class="btn btn-primary waves-effect waves-light">Thêm mới</a>
                 </br>
                 <table id="linh-vuc-table" class="table dt-responsive nowrap">
                     <thead>
