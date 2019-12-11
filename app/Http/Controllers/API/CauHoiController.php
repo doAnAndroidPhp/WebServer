@@ -13,10 +13,10 @@ class CauHoiController extends Controller
     public function layCauHoi(Request $request) 
     {
         $linhVucID = $request->query('linh_vuc');
-        $cau_hoi = CauHoi::where('linh_vuc_id', $linhVucID)->get()->random(1);
+        $cau_hoi = CauHoi::where('linh_vuc_id', $linhVucID)->get()->random(3);
         $result = [
             'success'   => true,
-            'data'    => $cau_hoi
+            'cau_hoi'    => $cau_hoi
         ];
         return response()->json($result);
     }

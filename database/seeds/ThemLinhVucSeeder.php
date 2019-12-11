@@ -11,30 +11,31 @@ class ThemLinhVucSeeder extends Seeder
      */
     public function run()
     {
-        $linhvuc = [];
-        $linhvuc = [
+        $linhvuc=[];
+            $linhvuc[] = [
                 'ten_linh_vuc' => 'Lịch sử',
             ];
-             $linhvuc = [
+             $linhvuc[] = [
                 'ten_linh_vuc' => 'Văn học',
             ];
-             $linhvuc = [
+             $linhvuc[] = [
                 'ten_linh_vuc' => 'Địa lý',
             ];
-             $linhvuc = [
+             $linhvuc[] = [
                 'ten_linh_vuc' => 'Hóa học',
             ];
-             $linhvuc = [
+             $linhvuc[] = [
                 'ten_linh_vuc' => 'Sinh học',
             ];
-             $linhvuc = [
+             $linhvuc[] = [
                 'ten_linh_vuc' => 'Ngu học'
             ];
+
             $i = 1;
-        // Them vao bang goi_credit
-        foreach ($linhvuc as $linh_vuc) {
+        // Them vao bang linh vuc
+        foreach ($linhvuc as $lv) {
             echo "Them linh vuc thu " . $i . "\n";
-            linhVuc::create($linh_vuc);
+            App\linhVuc::create($lv);
             $i++;
         }
         echo "Done...";

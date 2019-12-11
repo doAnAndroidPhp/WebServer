@@ -14,7 +14,7 @@ class LinhVucController extends Controller
         $listLinhVuc = LinhVuc::all()->random(4);
         $result = [
             'success'   => true,
-            'data'    => $listLinhVuc
+            'linh_vuc'    => $listLinhVuc
         ];
         return response()->json($result);
     }
