@@ -7,22 +7,34 @@ use App\QuanTriVien;
 
 class QuanTriVienController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $listquanTriVien = QuanTriVien::all(); 
         return view('quan-tri-vien.danh_sach', compact('listquanTriVien'));
     }
+    public function hienThiFormDangNhap()
+    {
+       return view('dang-nhap');
+    }
+    public function dangXuat()
+    {
+        auth('web')->logout();
+        redirect()->route('dang-nhap');
+    }
+    public function xuLyDangNhap( Request $req)
+    {
+       $credentials = [
+            'ten_dang_nhap' => $req->ten_dang_nhap,
+            'password'      => $req->mat_khau
+        ];
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+        if(!auth('web')->attempt($credentials)){
+            return 'Dang nhap khong thanh cong';
+        }
+
+        return redirect()->route('trang-chu');
+    }
+    
     public function create()
     {
         return view('quan-tri-vien.form');

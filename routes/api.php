@@ -24,7 +24,7 @@ Route::get('chi-tiet-luot-choi', 'API\ChiTietLuotChoiController@layDanhSach');
 Route::get('luot-choi', 'API\LuotChoiController@layDanhSach');
 Route::get('quan-tri-vien', 'API\QuanTriVienController@layDanhSach');
 
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('dang-nhap', 'API\DangNhapController@dangNhap');
+Route::middleware(['assign.guard:api','jwt.auth'])->group(function(){
+	Route::get('lay-thong-tin', 'API\DangNhapController@layThongTin');
 });

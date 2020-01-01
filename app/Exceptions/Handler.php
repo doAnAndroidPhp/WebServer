@@ -46,6 +46,23 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        //PLESE ADD THIS LINES
+        if($exception instanceof UnauthoriedHttpException){
+            $preException = $exception->getPrevious();
+            if($preException instanceof \Tymon\JWAuth\Exceptions\TokenExpiredException){
+                return response()->json(['error'=>'TOKEN_EXPIRED']);
+            }
+            else if($preException instanceof \Tymon\JWAuth\Exception\TokenInvalidException){
+                return response()->json(['error'=>'TOKEN_INVALID']);
+            }
+            else if($preException instanceof \Tymon\JWAuth\Exception\TokenBlacklistedException){
+                return response()->json(['error'=>'TOKEN_BLACKLISTED']);
+            }
+        }
+        if($exception->getMessage() === 'Token not provided'){
+            return response()->json(['error' =>'Token not provided']);
+        }
         return parent::render($request, $exception);
+
     }
 }

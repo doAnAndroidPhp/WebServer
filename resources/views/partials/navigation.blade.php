@@ -162,7 +162,7 @@
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item notify-item">
                             <i class="fe-log-out"></i>
-                            <span>Logout</span>
+                            <a href="{{ route('dang-xuat') }}">Logout</a>
                         </a>
 
                     </div>
@@ -333,8 +333,8 @@
                 <ul class="navigation-menu">
 
                     <li class="has-submenu">
-                        <a href="{{ route('dashboard') }}">
-                            <i class="la la-dashboard"></i>Dashboards</a>
+                        <a href="{{ route('trang-chu') }}">
+                            <i class="la la-dashboard"></i>Trang chủ</a>
                       
                     </li>
 

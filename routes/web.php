@@ -10,10 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware('auth:web')->group(function(){
+	Route::get('/', 'TrangChuController@trangChu')->name('trang-chu');
+	Route::get('dang-xuat', 'QuanTriVienController@dangXuat'
+	)->name('dang-xuat');
+});
+Route::middleware('guest:web')->group(function(){
+	Route::get('dang-nhap', 'QuanTriVienController@hienThiFormDangNhap'
+	)->name('dang-nhap');
+	Route::post('dang-nhap', 'QuanTriVienController@xuLyDangNhap'
+	)->name('xl-dang-nhap');
+});
 
-Route::get('/', function () {
-    return view('layout');
-})->name('dashboard');
 Route::prefix('linh-vuc')->group(function(){
 	Route::name('linh-vuc.')->group(function(){
 		Route::get('/', 'LinhVucController@index')->name('danh-sach');
