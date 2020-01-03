@@ -22,13 +22,7 @@ class ThemLinhVucSeeder extends Seeder
                 'ten_linh_vuc' => 'Địa lý',
             ];
              $linhvuc[] = [
-                'ten_linh_vuc' => 'Hóa học',
-            ];
-             $linhvuc[] = [
-                'ten_linh_vuc' => 'Sinh học',
-            ];
-             $linhvuc[] = [
-                'ten_linh_vuc' => 'Ngu học'
+                'ten_linh_vuc' => 'Hỏi vui'
             ];
 
             $i = 1;

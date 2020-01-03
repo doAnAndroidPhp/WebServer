@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\NguoiChoi;
+use Hash;
 
 class NguoiChoiController extends Controller
 {
@@ -38,7 +39,7 @@ class NguoiChoiController extends Controller
     {
         $nguoiChoi = new NguoiChoi;
         $nguoiChoi->ten_dang_nhap = $request->ten_dang_nhap;
-        $nguoiChoi->mat_khau = $request->mat_khau;
+        $nguoiChoi->mat_khau = Hash::make($request->mat_khau);
         $nguoiChoi->email = $request->email;
         $nguoiChoi->credit = $request->credit;
         $nguoiChoi->hinh_dai_dien = $request->hinh_dai_dien;
@@ -82,7 +83,7 @@ class NguoiChoiController extends Controller
     {
         $nguoiChoi = NguoiChoi::find($id);
         $nguoiChoi->ten_dang_nhap = $request->ten_dang_nhap;
-        $nguoiChoi->mat_khau = $request->mat_khau;
+        $nguoiChoi->mat_khau = Hash::make($request->mat_khau);
         $nguoiChoi->email = $request->email;
         $nguoiChoi->credit = $request->credit;
         $nguoiChoi->hinh_dai_dien = $request->hinh_dai_dien;
