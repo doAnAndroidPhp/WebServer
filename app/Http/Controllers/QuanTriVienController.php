@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\QuanTriVien;
+use Hash;
 
 class QuanTriVienController extends Controller
 {
@@ -50,7 +51,7 @@ class QuanTriVienController extends Controller
     {
         $quanTriVien = new QuanTriVien;
         $quanTriVien->ten_dang_nhap = $request->ten_dang_nhap;
-        $quanTriVien->mat_khau = $request->mat_khau;
+        $quanTriVien->mat_khau = Hash::make($request->mat_khau);
         $quanTriVien->save();
 
         return redirect()->route('quan-tri-vien.danh-sach');
@@ -90,6 +91,7 @@ class QuanTriVienController extends Controller
     {
         $quanTriVien = QuanTriVien::find($id);
         $quanTriVien->ten_dang_nhap = $request->ten_dang_nhap;
+        $quanTriVien->mat_khau = Hash::make($request->mat_khau);
         $quanTriVien->save();
         return redirect()->route('quan-tri-vien.danh-sach');
     }

@@ -13,17 +13,8 @@ class ThemCauHoiSeeder extends Seeder
     public function run()
     {
     	$cauhoi = [];
-             $cauhoi[] = [
-             	'noi_dung' =>' Có một tàu điện đi về hướng nam. Gió hướng tây bắc. Vậy khói từ con tàu sẽ theo hướng nào?',
-             	'linh_vuc_id' =>'1',
-             	'phuong_an_a' =>'Đông',
-             	'phuong_an_b' =>'Tây',
-             	'phuong_an_c' =>'Bắc',
-             	'phuong_an_d' =>'Không hướng nào',
-             	'dap_an' =>'Không hướng nào',
-             ];
-               $cauhoi []= ['noi_dung' =>' Có một tàu điện đi về hướng nam. Gió hướng tây bắc. Vậy khói từ con tàu sẽ theo hướng nào?','linh_vuc_id' =>'3','phuong_an_a' =>'Đông','phuong_an_b' =>'Tây','phuong_an_c' =>'Bắc','phuong_an_d' =>'Không hướng nào','dap_an' =>'Không hướng nào'];
- $cauhoi []= ['noi_dung' =>' Làm thế nào để không đụng phải ngón tay khi bạn đập búa vào một cái móng tay?','linh_vuc_id' =>'3','phuong_an_a' =>'Cầm búa bằng cả 2 tay ','phuong_an_b' =>'Cầm búa bằng tay trái ','phuong_an_c' =>'Cầm búa bằng tay phải','phuong_an_d' =>'Cầm búa bằng chân ','dap_an' =>'Cầm búa bằng cả 2 tay'];
+             
+                $cauhoi []= ['noi_dung' =>' Làm thế nào để không đụng phải ngón tay khi bạn đập búa vào một cái móng tay?','linh_vuc_id' =>'3','phuong_an_a' =>'Cầm búa bằng cả 2 tay ','phuong_an_b' =>'Cầm búa bằng tay trái ','phuong_an_c' =>'Cầm búa bằng tay phải','phuong_an_d' =>'Cầm búa bằng chân ','dap_an' =>'Cầm búa bằng cả 2 tay'];
  $cauhoi []= ['noi_dung' =>' Nếu bạn nhìn thấy con chim đang đậu trên nhánh cây, làm sao để lấy nhánh cây mà không làm động con chim?','linh_vuc_id' =>'3','phuong_an_a' =>'Bắt chim bỏ ra ngoài ','phuong_an_b' =>'Đợi chim bay đi. ','phuong_an_c' =>'Ru chim ngủ rồi lấy ','phuong_an_d' =>'Cứ đến mà lấy','dap_an' =>'Đợi chim bay đi. '];
  $cauhoi []= ['noi_dung' =>' Từ gì mà 100% người Việt Nam đều phát âm sai?','linh_vuc_id' =>'3','phuong_an_a' =>'Đúng','phuong_an_b' =>'Sai','phuong_an_c' =>'Đúng','phuong_an_d' =>'Đúng','dap_an' =>'Sai'];
  $cauhoi []= ['noi_dung' =>' Chồng người da đen, vợ người da trắng vừa sinh một đứa bé, răng của nó màu gì?','linh_vuc_id' =>'3','phuong_an_a' =>'Trắng','phuong_an_b' =>'Đen','phuong_an_c' =>'Vàng','phuong_an_d' =>'Đỏ','dap_an' =>'Trắng'];
@@ -52,6 +43,7 @@ class ThemCauHoiSeeder extends Seeder
  $cauhoi []= ['noi_dung' =>' Phong trào Đông Dương đại hội Đảng ta đã vận dụng hình thức đấu tranh nào ?','linh_vuc_id' =>'2','phuong_an_a' =>'Công khai, hợp pháp.','phuong_an_b' =>'Bất hợp pháp.','phuong_an_c' =>'Bán công khai, bán hợp pháp.','phuong_an_d' =>'Công khai, bất hợp pháp.','dap_an' =>'Công khai, hợp pháp.'];
  $cauhoi []= ['noi_dung' =>' Phong trào Đông Dương đại hội khởi đầu ở khu vực nào ?','linh_vuc_id' =>'2','phuong_an_a' =>'Bắc Kỳ.','phuong_an_b' =>'Trung Kỳ.','phuong_an_c' =>'Nam Kỳ.','phuong_an_d' =>'Trung Kỳ và Nam Kỳ.','dap_an' =>'Nam Kỳ.'];
  $cauhoi []= ['noi_dung' =>' Cuộc khủng hoảng kinh tế (1929 - 1933) đã ảnh hưởng lớn nhất đến nền kinh tế Việt Nam trên lĩnh vực nào:','linh_vuc_id' =>'2','phuong_an_a' =>'Nông nghiệp','phuong_an_b' =>'Công nghiệp','phuong_an_c' =>'Xuất khẩu','phuong_an_d' =>'Thủ công nghiệp','dap_an' =>'Nông nghiệp'];
+ $cauhoi []= ['noi_dung' =>' Lần đâu tiên nhân dân lao động Việt Nam kỉ niệm ngày Quốc tế lao động vào thời gian nào?','linh_vuc_id' =>'2','phuong_an_a' =>'1 - 5 - 1929.','phuong_an_b' =>'1 - 5 - 1930.','phuong_an_c' =>'1 - 5 - 1931.','phuong_an_d' =>'1 - 5 - 1933.','dap_an' =>'1 - 5 - 1930.'];
  $cauhoi []= ['noi_dung' =>' Cuộc biểu tình trong phong trào cách mạng 1930 - 1931 ở Nghệ - Tĩnh có gần 2 vạn nông dân tham gia diễn ra ở đâu?','linh_vuc_id' =>'2','phuong_an_a' =>'Anh Sơn','phuong_an_b' =>'Hưng Nguyên','phuong_an_c' =>'Thanh Chương','phuong_an_d' =>'Can Lộc','dap_an' =>'Hưng Nguyên'];
  $cauhoi []= ['noi_dung' =>' Điểm cực Bắc phần đất liền nước ta ở vĩ độ 23° 22 B tại xã Lũng Cú, huyện Đồng Văn, thuộc tỉnh','linh_vuc_id' =>'4','phuong_an_a' =>'Lào Cai','phuong_an_b' =>'Cao Bằng ','phuong_an_c' =>'Hà Giang','phuong_an_d' =>'Lạng Sơn','dap_an' =>'Hà Giang'];
  $cauhoi []= ['noi_dung' =>' Điểm cực Nam phần đất liền nước ta ở vĩ độ 8o30N tại xã Đất Mũi, huyện, Ngọc Hiển, tỉnh','linh_vuc_id' =>'4','phuong_an_a' =>'Kiên Giang','phuong_an_b' =>'Cà Mau','phuong_an_c' =>'An Giang','phuong_an_d' =>'Bạc Liêu','dap_an' =>'Cà Mau'];
@@ -74,6 +66,7 @@ class ThemCauHoiSeeder extends Seeder
  $cauhoi []= ['noi_dung' =>' Đoàn quân Tây tiến được thành lập năm nào sau đây:','linh_vuc_id' =>'1','phuong_an_a' =>'1945','phuong_an_b' =>'1946','phuong_an_c' =>'1947','phuong_an_d' =>'1948','dap_an' =>'1947'];
  $cauhoi []= ['noi_dung' =>' Bút pháp tiêu biểu của bài thơ Tây Tiến là:','linh_vuc_id' =>'1','phuong_an_a' =>'Hiện thực','phuong_an_b' =>'Lãng mạn','phuong_an_c' =>'Hiện thực XHCN','phuong_an_d' =>'Trào lộng','dap_an' =>'Lãng mạn'];
  $cauhoi []= ['noi_dung' =>'  Hoạt động nghệ thuật của Nguyễn Đình Thi nổi bật nhất ở lĩnh vực nào ?','linh_vuc_id' =>'1','phuong_an_a' =>'Viết văn','phuong_an_b' =>'Làm thơ','phuong_an_c' =>'Soạn nhạc','phuong_an_d' =>'Viết phê bình','dap_an' =>'Làm thơ'];
+
 
 
             $i = 1;
