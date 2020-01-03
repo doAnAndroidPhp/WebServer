@@ -21,6 +21,10 @@ class CreateLuotChoisTable extends Migration
             $table->string('ngay_gio');
             $table->timestamps();
         });
+        Schema::table('luot_choi', function($table){
+            $table->Integer('nguoi_choi_id')->unsigned();
+            $table->foreign('nguoi_choi_id')->references('id')->on('nguoi_choi');
+        });
     }
 
     /**

@@ -21,6 +21,14 @@ class CreateLichSuMuaCreditsTable extends Migration
             $table->Integer('so_tien');
             $table->timestamps();
         });
+        Schema::table('lich_su_mua_credit', function($table){
+            $table->Integer('nguoi_choi_id')->unsigned();
+            $table->foreign('nguoi_choi_id')->references('id')->on('goi_credit');
+        });
+        Schema::table('lich_su_mua_credit', function($table){
+            $table->Integer('goi_credit_id')->unsigned();
+            $table->foreign('goi_credit_id')->references('id')->on('goi_credit');
+        });
     }
 
     /**

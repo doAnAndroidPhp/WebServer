@@ -25,6 +25,10 @@ class CreateCauHoisTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+        Schema::table('cau_hoi', function($table){
+            $table->Integer('linh_vuc_id')->unsigned();
+            $table->foreign('linh_vuc_id')->references('id')->on('linh_vuc');
+        });
     }
 
     /**
