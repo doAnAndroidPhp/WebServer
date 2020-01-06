@@ -11,6 +11,7 @@
                 <form action="{{ route('nguoi-choi.xu-ly-them-moi') }}" method="POST">
                 @endif
                     @csrf
+
                     <div class="form-group">
                          <label for="ten_dang_nhap">Tên</label>
                         <input type="text" class="form-control" id="ten_dang_nhap" name="ten_dang_nhap" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->ten_dang_nhap}}" readonly="readonly" @endif>
@@ -31,10 +32,12 @@
                         <label for="credit">Credit</label>
                         <input type="text" class="form-control" id="credit" name="credit" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->credit}}" @endif>
                     </div>
-                    <div class="form-group">
-                        <label for="diem_cao_nhat">Điểm cao nhất</label>
-                        <input type="text" class="form-control" id="diem_cao_nhat" name="diem_cao_nhat" @if(isset($nguoiChoi)) value="{{ $nguoiChoi->diem_cao_nhat}}" @endif>
-                    </div>
+                    
+                    @if(session('alert')) 
+                                        <div class="alert alert-success">
+                                            {{session('alert')}}
+                                        </div>
+                                        @endif
                     <button type="submit" class="btn btn-primary waves-effect waves-light">@if(isset($nguoiChoi)) Cập nhật @else Thêm @endif</button>
                 </form>
 

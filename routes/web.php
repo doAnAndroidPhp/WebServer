@@ -10,7 +10,7 @@ Route::middleware('guest:web')->group(function(){
 	Route::post('dang-nhap', 'QuanTriVienController@xuLyDangNhap'
 	)->name('xl-dang-nhap');
 });
-
+Route::get('mail/send', 'SendMailController@send');
 Route::prefix('linh-vuc')->group(function(){
 	Route::name('linh-vuc.')->group(function(){
 		Route::get('/', 'LinhVucController@index')->name('danh-sach');

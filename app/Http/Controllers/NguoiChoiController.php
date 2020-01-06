@@ -43,9 +43,14 @@ class NguoiChoiController extends Controller
         $nguoiChoi->email = $request->email;
         $nguoiChoi->credit = $request->credit;
         $nguoiChoi->hinh_dai_dien = $request->hinh_dai_dien;
-        $nguoiChoi->diem_cao_nhat = $request->diem_cao_nhat;
-        $nguoiChoi->save();
+        $nguoiChoi->diem_cao_nhat = "0";
+        
 
+        if (NguoiChoi::where('ten_dang_nhap', '=', $request->ten_dang_nhap)->exists()) 
+        {
+            return redirect()->back()->with('alert', 'Tên tài khoản đã tồn tại');
+        }
+        $nguoiChoi->save();
         return redirect()->route('nguoi-choi.danh-sach');
     }
 

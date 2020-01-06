@@ -40,6 +40,13 @@ class GoiCreditController extends Controller
         $goiCredit->ten_goi = $request->ten_goi;
         $goiCredit->credit = $request->credit;
         $goiCredit->so_tien = $request->so_tien;
+        if (GoiCredit::where('ten_goi', '=', $request->ten_goi)->exists()) 
+        {
+            return redirect()->back()->with('alert', 'Gói credit đã tồn tại');
+        }
+        else if($request->credit<0){
+            return redirect()->back()->with('alert1', 'Credit không hợp lệ');
+        }
         $goiCredit->save();
 
         return redirect()->route('goi-credit.danh-sach');

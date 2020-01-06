@@ -39,13 +39,22 @@ class NguoiChoiController extends Controller
                 'message'   => 'Đăng ký thành công',
             ]);
     }
-   /* public function checkExist($ten_dang_nhap){
-        $query = "Select * from nguoi_choi where ten_dang_nhap = " +$ten_dang_nhap;
-        $result = mysqli_query($this->connection, $query);
-        if(mysqli_num_rows($result) >0){
-            return 1;
-        }
-        return 0;
-    }*/
-    
+    public function doiMatKhau(Request $req){
+        $nguoiChoi = NguoiChoi::find($req->id);
+        $nguoiChoi->mat_khau = Hash::make($req->mat_khau);
+        $nguoiChoi->save();
+        return response()->json([
+                'status'    => true,
+                'message'   => 'Đổi mật khẩu thành công',
+            ]);
+    }
+    public function muaCredit(Request $req){
+        $nguoiChoi = NguoiChoi::find($req->id);
+        $nguoiChoi->credit = $nguoiChoi->credit+$req->credit;
+        $nguoiChoi->save();
+        return response()->json([
+                'status'    => true,
+                'message'   => 'Mua thành công',
+            ]);
+    }
 }

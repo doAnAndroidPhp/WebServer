@@ -24,6 +24,16 @@
                         <label for="so_tien">Số tiền</label>
                         <input type="text" class="form-control" id="so_tien" name="so_tien" @if(isset($goiCredit)) value="{{ $goiCredit->so_tien}}" @endif>
                     </div>
+                    @if(session('alert')) 
+                                        <div class="alert alert-success">
+                                            {{session('alert')}}
+                                        </div>
+                                        @endif
+                                        @if(session('alert1')) 
+                                        <div class="alert alert-success">
+                                            {{session('alert1')}}
+                                        </div>
+                                        @endif
                     <button type="submit" class="btn btn-primary waves-effect waves-light">@if(isset($goiCredit)) Cập nhật @else Thêm @endif</button>
                 </form>
 

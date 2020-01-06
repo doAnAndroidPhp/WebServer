@@ -31,4 +31,12 @@ class LuotChoiController extends Controller
                 'message'   => 'Lưu thành công',
             ]);
     }
+    public function layLuotChoi(Request $req){
+        $LuotChoi = LuotChoi::where('nguoi_choi_id', $req->query('nguoi_choi_id'))->get()->all();
+        $result = [
+            'success'   => true,
+            'chi-tiet-luot-choi'    => $LuotChoi
+        ];
+        return response()->json($result);
+    }
 }

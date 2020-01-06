@@ -23,6 +23,7 @@
                     <tbody>
                         @foreach($listLuotChoi as $LuotChoi)
                         <tr>
+                            <td>{{$LuotChoi->id}}</td>
                             <td>{{$LuotChoi->nguoi_choi_id}}</td>
                             <td>{{$LuotChoi->so_cau}}</td>
                             <td>{{$LuotChoi->diem}}</td>

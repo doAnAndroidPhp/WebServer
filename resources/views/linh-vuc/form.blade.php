@@ -16,6 +16,11 @@
                                         <input type="text" class="form-control" id="ten_linh_vuc" name="ten_linh_vuc" @if(isset($linhVuc)) value="{{ $linhVuc->ten_linh_vuc}}" @endif>
                                     </div>
                                     <button type="submit" class="btn btn-primary waves-effect waves-light">@if(isset($linhVuc)) Cập nhật @else Thêm @endif</button>
+                                    @if(session('alert')) 
+                                        <div class="alert alert-success">
+                                            {{session('alert')}}
+                                        </div>
+                                        @endif
                                 </form>
 
                             </div> <!-- end card-body-->

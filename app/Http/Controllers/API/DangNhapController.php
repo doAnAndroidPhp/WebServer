@@ -25,7 +25,7 @@ class DangNhapController extends Controller
         if(!$token = auth('api')->attempt($credentials)){
             return response()->json([
                 'status'    => false,
-                'message'   => 'Unauthorized.',
+                'message'   => 'Sai tên tài khoản hoặc mật khẩu.',
             ], 401);
         }
 

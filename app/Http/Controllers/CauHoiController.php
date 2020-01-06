@@ -47,9 +47,14 @@ class CauHoiController extends Controller
         $cauHoi->phuong_an_d = $request->phuong_an_d;
         $cauHoi->dap_an = $request->dap_an;
         
+        if (CauHoi::where('noi_dung', '=', $request->noi_dung)->exists()) 
+        {
+            return redirect()->back()->with('alert_cauhoi', 'Câu hỏi đã tồn tại');
+        }
+        else{
         $cauHoi->save();
 
-        return redirect()->route('cau-hoi.danh-sach');
+        return redirect()->route('cau-hoi.danh-sach');}
     }
 
     /**

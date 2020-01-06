@@ -38,9 +38,15 @@ class LinhVucController extends Controller
     {
         $linhVuc = new LinhVuc;
         $linhVuc->ten_linh_vuc = $request->ten_linh_vuc;
-        $linhVuc->save();
-
-        return redirect()->route('linh-vuc.danh-sach');
+        if (LinhVuc::where('ten_linh_vuc', '=', $request->ten_linh_vuc)->exists()) 
+        {
+            return redirect()->back()->with('alert', 'Tên lĩnh vực đã tồn tại');
+        }
+        else{
+            $linhVuc->save();
+            return redirect()->route('linh-vuc.danh-sach');
+        }
+        
     }
 
     /**

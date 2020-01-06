@@ -22,9 +22,11 @@ Route::get('cau-hinh-tro-giup', 'API\CauHinhTroGiupController@layDanhSach');
 Route::get('lich-su-mua-credit', 'API\LichSuMuaCreditController@layDanhSach');
 Route::get('chi-tiet-luot-choi', 'API\ChiTietLuotChoiController@layDanhSach');
 Route::get('luot-choi', 'API\LuotChoiController@layDanhSach');
+Route::get('lay-luot-choi', 'API\LuotChoiController@layLuotChoi');
 Route::get('quan-tri-vien', 'API\QuanTriVienController@layDanhSach');
 
 Route::post('dang-nhap', 'API\DangNhapController@dangNhap');
+Route::post('doi-mat-khau', 'API\NguoiChoiController@doiMatKhau');
 Route::post('dang-ky', 'API\NguoiChoiController@dangKy');
 Route::post('luu-luot-choi', 'API\LuotChoiController@luuLuotChoi');
 Route::middleware(['assign.guard:api','jwt.auth'])->group(function(){
